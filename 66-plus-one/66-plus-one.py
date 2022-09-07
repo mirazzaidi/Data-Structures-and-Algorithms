@@ -1,10 +1,9 @@
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        """
-        [9]
-        [9]
-        [0,1]
-        """
+        
+        if len(digits) < 1:
+            return []
+
         digits.reverse()
         carry = 1
         for i in range(len(digits)):
