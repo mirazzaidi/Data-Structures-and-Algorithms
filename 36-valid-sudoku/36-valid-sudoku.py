@@ -9,7 +9,6 @@ class Solution:
                 if unit in unique:
                     return False
                 unique.add(unit)
-            
             return True
         
         for row in board:
