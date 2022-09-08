@@ -1,8 +1,7 @@
 class Solution:
     def letterCasePermutation(self, s: str) -> List[str]:
 
-
-        def permute(index: int, curr):
+        def permute(index: int, curr: str):
             if index == len(s):
                 res.append(curr)
                 return
