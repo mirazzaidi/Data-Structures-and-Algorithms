@@ -9,7 +9,7 @@ class Solution:
             
             permute(index+1, curr + s[index])
 
-            if s[index] not in '0123456789':
+            if s[index].isalpha():
                 permute(index+1, curr + (s[index]).swapcase())
                 
         res = []
