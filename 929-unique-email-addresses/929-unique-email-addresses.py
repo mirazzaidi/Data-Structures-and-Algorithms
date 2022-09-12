@@ -8,8 +8,7 @@ class Solution:
            
             local_name = local_name.replace('.','')
            
-            if '+' in local_name:
                 
-                local_name = local_name.split('+')[0]
+            local_name = local_name.split('+')[0]
             output.add(local_name+'@'+domain_name)
         return len(output)
