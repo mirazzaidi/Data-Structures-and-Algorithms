@@ -22,17 +22,12 @@
 
 class NestedIterator:
     def __init__(self, nestedList: [NestedInteger]):
-        self.stack = deque(nestedList)
-      
-              
+        self.stack = deque(nestedList)    
         
     
     def next(self) -> int:
         return self.stack.popleft().getInteger()
-        
-        
-                          
-    
+            
     def hasNext(self) -> bool:
         
         while self.stack:
