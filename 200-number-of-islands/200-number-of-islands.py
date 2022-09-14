@@ -7,7 +7,7 @@ class Solution:
         grid[i][j] = True
         directions = [[0,1], [0,-1], [1,0], [-1,0]]
         while q:
-            r, c = q.pop()            
+            r, c = q.popleft()            
             for direction in directions:
                 nr = r + direction[0]
                 nc = c + direction[1]
