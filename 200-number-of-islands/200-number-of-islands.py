@@ -24,7 +24,6 @@ class Solution:
                 for _ in range(n):
                     x,y = q.popleft()
 
-                    dirs = [(1,0), (0,1), (-1,0), (0,-1)]
                     for direction in dirs:
                         next_row = x + direction[0]
                         next_col = y + direction[1]
@@ -37,6 +36,8 @@ class Solution:
             
             
         islands = 0
+        dirs = [(1,0), (0,1), (-1,0), (0,-1)]
+        
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if grid[i][j] == '1':
