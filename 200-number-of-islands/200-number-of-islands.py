@@ -20,20 +20,20 @@ class Solution:
             grid[i][j] = '2'
             
             while q:
-                # n = len(q)
-                # for _ in range(n):
-                x,y = q.popleft()
+                n = len(q)
+                for _ in range(n):
+                    x,y = q.popleft()
 
-                dirs = [(1,0), (0,1), (-1,0), (0,-1)]
-                for direction in dirs:
-                    next_row = x + direction[0]
-                    next_col = y + direction[1]
-                    if next_row < 0 or next_row >= len(grid) or \
-                    next_col < 0 or next_col >=len(grid[0]) or \
-                    grid[next_row][next_col] != '1':
-                        continue
-                    grid[next_row][next_col] = '2'
-                    q.append((next_row, next_col))
+                    dirs = [(1,0), (0,1), (-1,0), (0,-1)]
+                    for direction in dirs:
+                        next_row = x + direction[0]
+                        next_col = y + direction[1]
+                        if next_row < 0 or next_row >= len(grid) or \
+                        next_col < 0 or next_col >=len(grid[0]) or \
+                        grid[next_row][next_col] != '1':
+                            continue
+                        grid[next_row][next_col] = '2'
+                        q.append((next_row, next_col))
             
             
         islands = 0
