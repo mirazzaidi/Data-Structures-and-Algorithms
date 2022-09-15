@@ -9,16 +9,10 @@ class Solution:
         
         def get_max_depth(root, curr_depth=1):
             if not root:
-                return
+                return 0
             
-            if not root.left and not root.right:
-                max_dep[0] = max(curr_depth, max_dep[0])
-            
-            get_max_depth(root.left, curr_depth+1)
-            get_max_depth(root.right, curr_depth+1)
-        
-        if not root:
-            return 0
-        max_dep = [0]
-        get_max_depth(root)
-        return max_dep[0]
+            left = get_max_depth(root.left, curr_depth+1)
+            right = get_max_depth(root.right, curr_depth+1)
+            return 1 + max(left, right)
+        return get_max_depth(root)
+        # return ÷max_dep[0]
